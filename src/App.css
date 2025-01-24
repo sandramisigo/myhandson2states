@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+body {
+  font-family: 'Playfair Display', serif; 
+  background: linear-gradient(145deg, #2c3e50, #34495e); /* Dark, moody gradient background */
+  color: #f5f5f5; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px; 
+  overflow-y: auto;
+}
+
+.App {
+  width: 80%;
+  max-width: 1100px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5); /* Deep shadow for a 3D effect */
+  border-radius: 25px; 
+  margin-top: 30px;
+  backdrop-filter: blur(10px); /* Glassmorphism effect for depth */
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.03); /* provides subtle hover effect for modern interaction */
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #f39c12, #e74c3c); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #e67e22; 
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+h2:after {
+  content: '';
+  width: 150px;
+  height: 5px;
+  background-color: #e74c3c; 
+  display: block;
+  margin: 15px auto;
+  border-radius: 3px;
+}
+
+/* Flexbox Layout for Content */
+.destination-list {
+  width: 80%;
+  padding-right: 30px; 
+}
+
+.itinerary-list {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.6); /* Dark translucent background */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); /* Deep shadow for a striking look */
+  overflow-y: auto;
+}
+
+/* Input and Button Styling */
+select, button {
+  margin-left: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #e67e22;
+  background: transparent;
+  color: #e67e22;
+  transition: all 0.3s ease;
+}
+
+select {
+  background: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
+  color: #fff;
+}
+
+button {
+  background: linear-gradient(135deg, #e67e22, #f39c12); /* Warm golden gradient */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(243, 156, 18, 0.6);
+}
+
+/* Itinerary List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(231, 76, 60, 0.15); /* Soft red tint for list items */
+  margin: 10px 0;
+  padding: 20px;
+  border-left: 5px solid #f39c12; /* Bold left border for distinction */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.05); /* Smooth hover effect */
+}
+
+ul li span {
+  background: rgba(243, 156, 18, 0.9); /* Warm gold for activity labels */
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #f39c12;
+  margin-top: 30px;
+}
+
+/* Scrollbar Styling */
+.App, .itinerary-list {
+  scrollbar-width: thin;
+  scrollbar-color: #f39c12 rgba(0, 0, 0, 0.4);
+}
+
+.App::-webkit-scrollbar, .itinerary-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.App::-webkit-scrollbar-thumb, .itinerary-list::-webkit-scrollbar-thumb {
+  background-color: #f39c12; /* Gold scrollbar */
+  border-radius: 12px;
+}
